@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – Haryali Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #2e7d32, #66bb6a);
+      color: #1b1b1b;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 1200px;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1b1b1b;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover { color: #66bb6a; }
+
+    .page-title {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .page-title h1 { font-size: 42px; font-weight: 700; }
+    .page-title h1 span { color: #66bb6a; }
+    .page-title p { margin-top: 10px; color: #555; font-size: 16px; }
+
+    .divider {
+      width: 70px; height: 4px;
+      background: #66bb6a;
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    /* Intro */
+    .intro {
+      margin-top: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .intro-text { flex: 1; min-width: 280px; max-width: 580px; }
+    .intro-text h2 { font-size: 28px; font-weight: 700; margin-bottom: 14px; }
+    .intro-text h2 span { color: #66bb6a; }
+    .intro-text p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 12px; }
+
+    .intro-img { flex: 1; min-width: 0px; display: flex; justify-content: center; }
+    /* Stats */
+    .stats {
+      display: flex; gap: 16px; margin-top: 44px; flex-wrap: wrap;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border-radius: 14px; padding: 28px 24px;
+    }
+
+    .stat { flex: 1; min-width: 120px; text-align: center; }
+    .stat h3 { font-size: 30px; font-weight: 700; color: #2e7d32; }
+    .stat p { font-size: 13px; color: #555; margin-top: 4px; }
+
+    /* Section heading */
+    .section-heading { margin-top: 50px; text-align: center; }
+    .section-heading h2 { font-size: 28px; font-weight: 700; }
+    .section-heading h2 span { color: #66bb6a; }
+    .section-heading p { margin-top: 8px; color: #555; font-size: 14px; }
+
+    /* Activities */
+    .activities-grid { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 28px; }
+
+    .activity-card {
+      flex: 1; min-width: 220px;
+      border: 2px solid #e8f5e9; border-radius: 14px;
+      padding: 20px 18px;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .activity-card:hover {
+      box-shadow: 0 8px 24px rgba(102,187,106,0.18);
+      transform: translateY(-4px);
+    }
+
+    .activity-card .icon { font-size: 28px; margin-bottom: 10px; }
+    .activity-card h4 { font-size: 15px; font-weight: 700; color: #2e7d32; margin-bottom: 6px; }
+    .activity-card p { font-size: 13px; color: #555; line-height: 1.6; }
+
+    /* Afforestation */
+    .afforestation {
+      margin-top: 50px;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border-radius: 14px; padding: 32px 28px;
+    }
+
+    .afforestation h2 { font-size: 26px; font-weight: 700; margin-bottom: 14px; }
+    .afforestation h2 span { color: #66bb6a; }
+    .afforestation p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 14px; }
+
+    .locations { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .location-tag {
+      background: #66bb6a; color: #fff;
+      padding: 6px 16px; border-radius: 20px;
+      font-size: 13px; font-weight: 600;
+    }
+
+    .highlights { margin-top: 28px; }
+    .highlights h3 { font-size: 17px; font-weight: 700; color: #2e7d32; margin-bottom: 14px; }
+    .highlight-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .highlight-item {
+      display: flex; align-items: center; gap: 10px;
+      background: #fff; border-radius: 10px; padding: 9px 14px;
+      font-size: 13px; color: #333; border: 1.5px solid #c8e6c9;
+    }
+
+    .highlight-item .dot {
+      width: 9px; height: 9px;
+      border-radius: 50%; background: #66bb6a; flex-shrink: 0;
+    }
+
+    /* Ayurveda */
+    .ayurveda {
+      margin-top: 50px;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 30px;
+    }
+
+    .ayurveda-text { flex: 1; min-width: 280px; max-width: 580px; }
+    .ayurveda-text h2 { font-size: 26px; font-weight: 700; margin-bottom: 14px; }
+    .ayurveda-text h2 span { color: #66bb6a; }
+    .ayurveda-text p { font-size: 15px; color: #555; line-height: 1.8; margin-bottom: 12px; }
+
+    .badge {
+      display: inline-block;
+      background: #e8f5e9; color: #2e7d32;
+      border-radius: 20px; padding: 6px 14px;
+      font-size: 13px; font-weight: 600;
+      margin-top: 6px; margin-right: 8px;
+    }
+
+    .ayurveda-icon {
+      flex: 1; min-width: 180px;
+      display: flex; justify-content: center;
+      align-items: center; font-size: 100px;
+    }
+
+    /* Branches */
+    .branches { margin-top: 44px; }
+    .branches h2 { font-size: 26px; font-weight: 700; margin-bottom: 20px; text-align: center; }
+    .branches h2 span { color: #66bb6a; }
+
+    .branch-row {
+      display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;
+    }
+
+    .branch-card {
+      flex: 1; min-width: 160px; max-width: 220px;
+      border: 2px solid #e8f5e9; border-radius: 14px;
+      padding: 22px 18px; text-align: center;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    .branch-card:hover {
+      box-shadow: 0 8px 24px rgba(102,187,106,0.18);
+      transform: translateY(-4px);
+    }
+
+    .branch-card .b-icon { font-size: 32px; margin-bottom: 10px; }
+    .branch-card h4 { font-size: 16px; font-weight: 700; color: #2e7d32; }
+
+    /* CTA */
+    .cta {
+      margin-top: 50px; text-align: center;
+      padding: 36px 20px;
+      background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+      border-radius: 14px;
+    }
+
+    .cta h2 { font-size: 24px; font-weight: 700; margin-bottom: 10px; }
+    .cta p { font-size: 15px; color: #555; margin-bottom: 22px; }
+
+    .buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+    .buttons a {
+      padding: 12px 25px; border: none;
+      border-radius: 30px; text-decoration: none;
+      font-weight: 600; transition: background 0.3s;
+    }
+
+    .explore { background: #66bb6a; color: #fff; }
+    .explore:hover { background: #43a047; }
+    .learn { background: #fff; color: #2e7d32; border: 2px solid #66bb6a; }
+    .learn:hover { background: #e8f5e9; }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h2>Haryali NGO</h2>
+      <nav>
+        <ul>
+          <li><a href="haryaliHome.html">Home</a></li>
+          <li><a href="haryaiAboutUs.html">About</a></li>
+          <li><a href="haryaliContactUs.html">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="page-title">
+      <h1>About <span>Haryali</span></h1>
+      <p>Action-oriented. Community-driven. Rooted since 1996.</p>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Who We Are -->
+    <div class="intro">
+      <div class="intro-text">
+        <h2>Who <span>We Are</span></h2>
+        <p>Hariyali is an action-oriented NGO dedicated to Environment Conservation, established in <strong>1996</strong> by CA. Prof. Punam Singavi. With branches at Thane, Mulund, and Dombivli, we carry out activities with participation from Corporate Offices, Colleges, School students, and green enthusiasts.</p>
+        <p>Hariyali undertakes green initiatives such as water conservation, rainwater harvesting, nirmalya collection, composting, sapling preparation, plantation drives, and eco-friendly awareness programs.</p>
+        <p>The organization also regularly conducts various activities for school and college students, inspiring them to connect with nature and take responsibility for the environment around them.</p>
+      </div>
+      <div class="intro-img">
+        <img style="height: 300px; width: 400px;" src="haryaliLogi.jpeg" alt="Haryali Foundation">
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat">
+        <h3>1996</h3>
+        <p>Year Founded</p>
+      </div>
+      <div class="stat">
+        <h3>3</h3>
+        <p>Branches</p>
+      </div>
+      <div class="stat">
+        <h3>1 Lakh+</h3>
+        <p>Plants Planted</p>
+      </div>
+      <div class="stat">
+        <h3>5</h3>
+        <p>Major Afforestation Sites</p>
+      </div>
+      <div class="stat">
+        <h3>20,000</h3>
+        <p>Trees at Tetavali</p>
+      </div>
+    </div>
+
+    <!-- Activities -->
+    <div class="section-heading">
+      <h2>Our <span>Activities</span></h2>
+      <p>From forests to classrooms — here's how we make a difference</p>
+    </div>
+
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="icon">🌳</div>
+        <h4>Afforestation</h4>
+        <p>Urban plantation, water management, grass management, and large-scale forest development in coordination with the forest department.</p>
+      </div>
+      <div class="activity-card">
+        <div class="icon">♻️</div>
+        <h4>Solid Waste Management</h4>
+        <p>Nirmalya collection and composting initiatives to reduce waste and return nutrients to the earth.</p>
+      </div>
+      <div class="activity-card">
+        <div class="icon">🌿</div>
+        <h4>Vanaspati Udyan</h4>
+        <p>Creation and maintenance of medicinal plant gardens showcasing traditional ayurvedic biodiversity.</p>
+      </div>
+      <div class="activity-card">
+        <div class="icon">🧪</div>
+        <h4>Workshops &amp; Seminars</h4>
+        <p>Organization of conferences, seminars, and eco-awareness sessions for communities, corporates, and students.</p>
+      </div>
+      <div class="activity-card">
+        <div class="icon">🌱</div>
+        <h4>Nursery Activities</h4>
+        <p>Seed collection and nursery operations at Thane, Murar Road Mulund (W), ITI Mulund (E), and Dombivli.</p>
+      </div>
+      <div class="activity-card">
+        <div class="icon">🏕️</div>
+        <h4>Parasbaug &amp; Eco Tours</h4>
+        <p>Sessions on vertical gardening, medicinal preparation, microgreens, kokedama, jeevamrut, beejamrut, and home composting for students.</p>
+      </div>
+    </div>
+
+    <!-- Afforestation Projects -->
+    <div class="afforestation">
+      <h2>Major <span>Afforestation Projects</span></h2>
+      <p>In coordination with the Forest Department, Hariyali has successfully completed major afforestation projects and planted more than <strong>1,00,000 plants</strong> across these sites — in addition to trees planted at various other locations.</p>
+
+      <div class="locations">
+        <span class="location-tag">📍 Kokanipada</span>
+        <span class="location-tag">📍 Bhawale</span>
+        <span class="location-tag">📍 Digha</span>
+        <span class="location-tag">📍 Munda</span>
+        <span class="location-tag">📍 Tetavali</span>
+      </div>
+
+      <div class="highlights">
+        <h3>Highlights from Tetavali Forest Area</h3>
+        <div class="highlight-grid">
+          <div class="highlight-item"><span class="dot"></span>20,000 trees planted</div>
+          <div class="highlight-item"><span class="dot"></span>Drip irrigation &amp; borewell</div>
+          <div class="highlight-item"><span class="dot"></span>Tanks, bunds &amp; dams built</div>
+          <div class="highlight-item"><span class="dot"></span>Nakshatra Van</div>
+          <div class="highlight-item"><span class="dot"></span>Miyawaki Forest</div>
+          <div class="highlight-item"><span class="dot"></span>Butterfly Garden</div>
+          <div class="highlight-item"><span class="dot"></span>Lotus Pond</div>
+          <div class="highlight-item"><span class="dot"></span>22 types of bamboos</div>
+          <div class="highlight-item"><span class="dot"></span>Medicinal Plants section</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ayurveda & Portal -->
+    <div class="ayurveda">
+      <div class="ayurveda-text">
+        <h2>Ayurveda &amp; the <span>Medicinal Plants Portal</span></h2>
+        <p>Ayurveda, an ancient Indian system of medicine, emphasizes the healing power of plants. Hariyali, in collaboration with <strong>IES Management &amp; Research Institute, Bandra</strong> and <strong>Mulund College of Commerce</strong>, has developed this portal to spread awareness about the utility of medicinal plants.</p>
+        <p>This initiative promotes sustainable living and traditional knowledge. The information covers the medicinal plants repository maintained at Hariyali nurseries. For the benefit of the common person, all audio explanations have been developed in <strong>Marathi</strong>.</p>
+        <span class="badge">🌿 Medicinal Plants Repository</span>
+        <span class="badge">🎧 Audio in Marathi</span>
+        <span class="badge">🤝 IES &amp; MCC Collaboration</span>
+      </div>
+      <div class="ayurveda-icon">🌿</div>
+    </div>
+
+    <!-- Branches -->
+    <div class="branches">
+      <h2>Our <span>Branches</span></h2>
+      <div class="branch-row">
+        <div class="branch-card">
+          <div class="b-icon">🏙️</div>
+          <h4>Thane</h4>
+        </div>
+        <div class="branch-card">
+          <div class="b-icon">🌆</div>
+          <h4>Mulund</h4>
+        </div>
+        <div class="branch-card">
+          <div class="b-icon">🌇</div>
+          <h4>Dombivli</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <h2>Join us in nurturing the green legacy of our planet</h2>
+      <p>We extend our hand to every section of society. It is only when each individual plays their part, no matter how small, that we can truly make a difference.</p>
+      <div class="buttons">
+        <a href="haryaliExplore.html" class="explore">Explore Now</a>
+        <a href="haryaliContactUs.html" class="learn">Contact Us</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

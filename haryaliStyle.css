@@ -1,0 +1,197 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #2e7d32, #66bb6a);
+  color: #2c2c1e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-left: 260px;
+}
+
+/* HERO */
+.hero-text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  color: #388e3c;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #2c2c2c;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  color: #f0f0f0;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #a5ffae;
+}
+
+.card a {
+  text-decoration: none;
+  color: #66bb6a;
+  font-weight: 600;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* SIDEBAR */
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2e7d32, #66bb6a);
+  overflow-y: auto;
+  box-shadow: 3px 0 12px rgba(0,0,0,0.25);
+}
+
+/* NAV HEADER */
+.nav-header {
+  background-color: rgba(0,0,0,0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.nav-header h1 {
+  font-size: 0.9rem;
+  color: #e8f5e9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* LIST RESET */
+.category-list,
+.flower-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* CATEGORY ITEM */
+.category-item {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* CATEGORY BUTTON */
+.category-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #e8f5e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.category-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ARROW */
+.arrow {
+  font-size: 0.7rem;
+  transition: transform 0.3s;
+}
+
+.category-btn.open .arrow {
+  transform: rotate(90deg);
+}
+
+/* FLOWER LIST (DROPDOWN) */
+.flower-list {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(0,0,0,0.15);
+  transition: max-height 0.4s ease;
+}
+
+.flower-list.open {
+  max-height: 1000px;
+}
+
+/* FLOWER ITEMS */
+.flower-list li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px 10px 35px;
+  color: #f1f8f3;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s, padding-left 0.2s;
+}
+
+/* ICON FIX */
+.flower-list li a::before {
+  content: "🌿";
+  font-size: 0.9rem;
+}
+
+/* HOVER EFFECT */
+.flower-list li a:hover {
+  background: rgba(255,255,255,0.1);
+  padding-left: 40px;
+}

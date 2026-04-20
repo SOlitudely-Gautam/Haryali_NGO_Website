@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Garlic</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #d9f0e3, #f5fff9);
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs8e2qsL8dfsCG3q3K3hpDrwMPUDhC17IrlQ&s') center/cover no-repeat;
+      height: 45vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: #fff;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      z-index: 2;
+      text-align: center;
+    }
+
+   header h4{
+        font-size: 15px;
+        color: white;
+        padding:0px;
+        margin:0px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      padding: 1rem 2rem;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 50px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      width: 350px;
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .location {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #4caf50;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* QR Code Section */
+    .qr-section {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      width: 350px;
+      padding: 2rem;
+      text-align: center;
+      margin: 0 auto 3rem auto;
+      transition: transform 0.3s ease;
+    }
+
+    .qr-section:hover {
+      transform: translateY(-10px);
+    }
+
+    .qr-section h2 {
+      font-size: 1.8rem;
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+
+    .qr-section img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .qr-section p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    footer {
+      background: #4caf50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #388e3c;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>
+    Garlic<br>
+    <span style="font-size: 1rem;">मराठी नाव: लसूण</span>&nbsp &nbsp
+    <span style="font-size: 1rem;">हिंदी नाम: लहसुन</span>&nbsp &nbsp
+     <span style="font-size: 1rem;">संस्कृत नाम: लशुन</span>&nbsp &nbsp
+    <br>
+     <audio controls>
+       <source src="../Audios/B20.mp3" type="audio/mpeg">
+     </audio>
+  </h1>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Plants</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQc6nd8BsNVgxnW0Y0Qq5sUn2GnDmk8N02kg&s" alt="Baskeria Priponits" width="50px">
+    <div class="card-content">
+      <h2>Scientific Name</h2>
+      <p><strong>Allium sativum</strong></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHkzhWYLqQ3HDCPsbk1M-xmwqZkNF_02aSlQ&s" alt="Useful Parts"  width="3px">
+    <div class="card-content">
+      <h2>Useful Parts</h2>
+      <p> Bulb (Root), Leaf,Seed</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM4PuOvC9yNJb9Rz0jek6tiKT4bBgmo5MggA&s" alt="Uses">
+    <div class="card-content">
+      <h2>Uses</h2>
+      <p>Immunity booster, cholesterol control</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img class="location" src="data:image/jpeg;base64,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" alt="Location">
+    <div class="card-content">
+      <h2>Location</h2>
+      <p>Coastal India, Southeast Asia, Pacific Islands</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1lmUv3lT9hX0PlSazIb7ohCXCV8HxPI0ebQ&s" alt="Taste & Properties">
+    <div class="card-content">
+      <h2>Taste & Potency</h2>
+      <p>Taste: सुवासिक, किंचित गोड– कडू, तुरट <br> Potency: उष्ण<br> Metabolic Property: जड, तेलकट</p>
+    </div>
+  </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwDB6g4n6lFU4seY1SK4h7eGFVomZ4FgCmDg&s" alt="Medical uses">
+      <div class="card-content">  
+        <h2>Medical uses</h2>
+        <p>Used in cholesterol-lowering and immunity boosters</p>
+      </div>
+    </div>
+  </div>
+
+
+<!-- QR Code Section -->
+<div class="qr-section">
+  <h2>Scan Me</Menu></h2>
+  <img src="qr-code.png" alt="QR Code">
+  <p>Scan this QR code to access detailed information and additional resources</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Hariyali Project. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

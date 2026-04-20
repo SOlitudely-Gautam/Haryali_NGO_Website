@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Coral Tree</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #d9f0e3, #f5fff9);
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: url('https://www.flowersofindia.net/catalog/slides/Indian%20Coral%20Tree.jpg') center/cover no-repeat;
+      height: 45vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: #fff;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      z-index: 2;
+      text-align: center;
+    }
+
+   header h4{
+        font-size: 15px;
+        color: white;
+        padding:0px;
+        margin:0px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      padding: 1rem 2rem;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 50px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      width: 350px;
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-content h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #4caf50;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* QR Code Section */
+    .qr-section {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      width: 350px;
+      padding: 2rem;
+      text-align: center;
+      margin: 0 auto 3rem auto;
+      transition: transform 0.3s ease;
+    }
+
+    .qr-section:hover {
+      transform: translateY(-10px);
+    }
+
+    .qr-section h2 {
+      font-size: 1.8rem;
+      color: #4caf50;
+      margin-bottom: 1rem;
+    }
+
+    .qr-section img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .qr-section p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    footer {
+      background: #4caf50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #388e3c;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Indian Coral Tree<br>
+    <span style="font-size: 1rem;">मराठी नाव:पांगारा  </span>&nbsp &nbsp
+    <span style="font-size: 1rem;">हिंदी नाम:पारिजात</span>&nbsp &nbsp
+     <span style="font-size: 1rem;">संस्कृत नाम:पारिभद्र </span>&nbsp &nbsp<br>
+     <audio controls>
+      <source src="C:\Users\Murgakumar Pakkiam\Documents\E[1]\audios\E-16 PANGARA MUSIC.mp4" type="audio/mpeg">
+  </audio><br>
+    
+  </h1>
+</header>
+
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Plants</a>
+  <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://wcc.edu.in/wp-content/uploads/2022/10/Indian-coral-tree.jpg" alt="Baskeria Priponits">
+    <div class="card-content">
+      <h2>Scientific Name</h2>
+      <p><strong> Erythrina variegata</strong></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://indiabiodiversity.org/files-api/api/get/raw/img//Erythrina%20variegata/Erythrina_variegata_leaf_twig.jpg" alt="Useful Parts"  width="3px">
+    <div class="card-content">
+      <h2>Useful Parts</h2>
+      <p>Bark, Leaves</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vghYVLP7uW9xNoSAtNL-V3foOioA3LLRGg&s" alt="Uses">
+    <div class="card-content">
+      <h2>Medical Uses</h2>
+      <p>Fever, worms, ear problems</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1BhLAVby5TMwLtob7k10TXvERcJZBa4a81w&s" alt="Location">
+    <div class="card-content">
+      <h2>Location</h2>
+      <p>Throughout India</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://www.feedipedia.org/sites/default/files/images/erythrina_variagata_paribhadrah_5461158018.jpg" alt="Taste and Potency">
+    <div class="card-content">
+      <h2>Taste & Potency</h2>
+      <p>Taste:तिक्त<br> Potency:उष्ण<br> Metabolic Property:कटु</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzz8suyFKC-dgoNPNMNOzjk2-Od1oSncFBi1hNUYnmlT68Fe82NmIl4U1rAgDbmWHtBkcjn9ypLLvfhHD8qGHWiyNi-SHGVW-ubKNPHAF-7NVocoEIRNK-WafvbwVye_XNyREfDj4YgaMW/s1600/flower.jpg" alt="Ayurvedic uses">
+    <div class="card-content">
+      <h2>Ayurvedic Uses</h2>
+      <p>Treats Kapha, fever, ear infections</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT-70j8X-0X4pcBHzANu_SKbb3EX0XNwIm-w&s" alt="Product">
+    <div class="card-content">
+      <h2>Product Name</h2>
+      <p> Pangara Powder</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- QR Code Section -->
+<div class="qr-section">
+  <h2>Scan Me</h2>
+  <img src="" alt="QR Code">
+  <p>Scan this QR code to access detailed information and additional resources.</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Hariyali Project. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
